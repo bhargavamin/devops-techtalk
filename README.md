@@ -1,10 +1,13 @@
-## DevOps on AWS
+# DevOps on AWS
 
-**7th Oct 2017**
+**7th Oct 2017** 
 
-You can use the [editor on GitHub](https://github.com/bhargavamin/devops-techtalk/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Author : [Bhargav Amin](http://bhargavamin.com)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Demo 1: Deploying a sample tomcat application 
+
+
+## Demo 2: Manage cloudformation stack using CI/CD approach
 
 ### Markdown
 
