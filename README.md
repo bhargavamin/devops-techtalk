@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+## DevOps on AWS
+
+**7th Oct 2017**
 
 You can use the [editor on GitHub](https://github.com/bhargavamin/devops-techtalk/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
