@@ -8,8 +8,9 @@
 
 `git clone https://github.com/bhargavamin/devops-techtalk.git`
 
+Demos :
 1. Deploying a sample tomcat application
-2. Manage cloudformation stack using CI/CD approach
+2. Manage infrastructure using CI/CD
 
 
 
