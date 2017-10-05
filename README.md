@@ -13,7 +13,11 @@ Demos :
 2. Manage infrastructure using CI/CD
 
 
+Pre-requistes:
+- AWS account
+- Pem key named `techtalk`
 
+Note: 
 
 ### Support or Contact
 [Blog](http://bhargavamin.com/blog)  |  [LinkedIn](https://www.linkedin.com/in/bhargavamin/)
