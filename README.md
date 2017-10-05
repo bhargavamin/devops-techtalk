@@ -15,6 +15,9 @@ Demos :
 
 Pre-requistes:
 - AWS account
+- Create Pem key named `techtalk`
+- Upload and run ec2-instance.yaml in cloudformation to an launch instance for Demo 1
+- For Demo2, upload and run `demo-2/CodePipeline.yml` in cloudformation to create the Codepipline for Demo 2
 
 
 
