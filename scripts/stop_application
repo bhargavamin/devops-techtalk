@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+ps -ef | grep tomcat7 | grep -v grep
+[ $?  -eq "0" ] && echo "process is running" && service tomcat7 stop|| echo "process is not running"
