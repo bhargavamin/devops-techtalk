@@ -8,7 +8,7 @@ TOMCAT_VERSION=7.0.82
 # Tar file name
 TOMCAT7_CORE_TAR_FILENAME="apache-tomcat-$TOMCAT_VERSION.tar.gz"
 # Download URL for Tomcat7 core
-TOMCAT7_CORE_DOWNLOAD_URL="http://www-eu.apache.org/dist/tomcat/tomcat-7/v7.0.81/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz"
+TOMCAT7_CORE_DOWNLOAD_URL="http://www-eu.apache.org/dist/tomcat/tomcat-7/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz"
 # The top-level directory after unpacking the tar file
 TOMCAT7_CORE_UNPACKED_DIRNAME="apache-tomcat-$TOMCAT_VERSION"
 
