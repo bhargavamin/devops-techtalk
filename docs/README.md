@@ -2,7 +2,7 @@
 
 **7th Oct 2017** 
 
-### **Fill up this google form to get $100 AWS credits:** https://goo.gl/PjTXkb
+**Fill up this google form to get $100 AWS credits:** https://goo.gl/PjTXkb
 
 ## Clone this repository for demo 
 
