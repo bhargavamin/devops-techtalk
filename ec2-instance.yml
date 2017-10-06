@@ -98,6 +98,30 @@ Mappings:
       HVMG2: ami-315f4850
       PV64: ami-d93622b8
 Resources:
+  CodeDeployRole: 
+    Type: "AWS::IAM::Role"
+    Properties: 
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - 
+            Effect: "Allow"
+            Principal: 
+              Service: 
+                - "ec2.amazonaws.com"
+                - "codedeploy.amazonaws.com"
+            Action: 
+              - "sts:AssumeRole"
+              
+      ManagedPolicyArns:
+        - "arn:aws:iam::aws:policy/AdministratorAccess"
+      Path: "/"
+  CDInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: "/"
+      Roles:
+      - !Ref CodeDeployRole
   WebServer:
     Type: AWS::EC2::Instance
     Properties:
@@ -106,6 +130,7 @@ Resources:
         Ref: InstanceType
       KeyName:
         Ref: KeyName
+      IamInstanceProfile: !Ref CDInstanceProfile
       SecurityGroups:
       - Ref: WebServerSecurityGroup
       UserData:
