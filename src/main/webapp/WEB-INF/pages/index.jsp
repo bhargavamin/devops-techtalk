@@ -60,6 +60,10 @@
       </ul>
     </div>
   <% } %>
+  <div class="jumbotron">
+      <h1>Application is live</h1>
+      <p><i>it works! #buildwithAWS</i></p>
+    </div>
   <div class="container theme-showcase" role="main">
     <% if (((String) request.getAttribute("deploymentGroupName")).contains("demo")) { %>
       <div class="alert alert-dismissible alert-warning">
@@ -80,14 +84,7 @@
         </div>
       </div>
     <% } %>
-    <div class="jumbotron">
-      <h1>Application is live</h1>
-      <p><i>it works!</i></p>
-    </div>
-    <div class="page-header">
-      <h1>#buildwithAWS</h1>
-    </div>
-
+    
   </div>
   <script type="text/javascript" src="webjars/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="webjars/bootstrap/3.2.0/js/bootstrap.min.js"></script>

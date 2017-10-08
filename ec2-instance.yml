@@ -10,7 +10,7 @@ Parameters:
     - t2.large
     ConstraintDescription: must be a valid EC2 instance type.
     Default: t2.micro
-    Description: WebServer EC2 instance type
+    Description: TestInstance EC2 instance type
     Type: String
   KeyName:
     ConstraintDescription: must be the name of an existing EC2 KeyPair.
@@ -122,7 +122,7 @@ Resources:
       Path: "/"
       Roles:
       - !Ref CodeDeployRole
-  WebServer:
+  TestInstance:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: !FindInMap [AWSRegionArch2AMI, !Ref 'AWS::Region', !FindInMap [AWSInstanceType2Arch, !Ref InstanceType, Arch]]      
@@ -132,7 +132,7 @@ Resources:
         Ref: KeyName
       IamInstanceProfile: !Ref CDInstanceProfile
       SecurityGroups:
-      - Ref: WebServerSecurityGroup
+      - Ref: TestInstanceSecurityGroup
       UserData:
         Fn::Base64: !Sub |
            #!/bin/bash -xe
@@ -143,7 +143,7 @@ Resources:
            chmod +x ./install
            sudo ./install auto
  
-  WebServerSecurityGroup:
+  TestInstanceSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: "Enable HTTP access via port 80 locked down to the load balancer + SSH access"
@@ -159,4 +159,4 @@ Resources:
 Outputs:
   PublicIP:
     Description: EC2 public IP
-    Value: !GetAtt WebServer.PublicIp
+    Value: !GetAtt TestInstance.PublicIp
